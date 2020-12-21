@@ -5,7 +5,7 @@ import Button from '../Button';
 describe('Button', () => {
   it('renders a <button>', () => {
     const wrapper = shallow(<Button>Teste</Button>);
-    expect(wrapper.type()).toBe('button'); 
+    expect(wrapper.type()).toBe('button');
   });
 
   it('passes `children` through to the <button>', () => {
