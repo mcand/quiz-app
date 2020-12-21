@@ -1,6 +1,6 @@
 # Quiz App
 
-## Running the application in developmnet
+## Running the application in development
 
 `npm install`
 
