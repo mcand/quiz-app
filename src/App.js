@@ -3,7 +3,7 @@ import Quiz from './Components/Quiz';
 import Grid from '@material-ui/core/Grid';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import { Provider } from 'react-redux';
+import { Provider} from 'react-redux';
 import store from './store';
 
 const theme = createMuiTheme({

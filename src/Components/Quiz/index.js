@@ -5,7 +5,7 @@ import Tutorial from '../Tutorial';
 import Result from '../Result';
 import Question from '../Question';
 
-const Quiz = ({ round, ended }) => {
+export const Quiz = ({ round, ended }) => {
 
   function getStep(round, ended) {
     if (round === 0) {

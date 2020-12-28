@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { GAME_STARTED } from '../../actions';
 import QuestionService from '../../Services/QuestionService';
 import PropTypes from 'prop-types';
-const Tutorial = ({onGameStart}) => {
+export const Tutorial = ({onGameStart}) => {
 
   function handleGameStart() {
     QuestionService.getQuestions()
@@ -24,7 +24,7 @@ const Tutorial = ({onGameStart}) => {
           <Rule>You win if you can answer all the 30 questions</Rule>
           <Rule>If you answer an answer incorrectly, you lose and should start over</Rule>
           <Rule>Good Luck 🍀</Rule>
-          </RuleList>
+        </RuleList>
       </Welcome>
       <Button
         variant='contained'

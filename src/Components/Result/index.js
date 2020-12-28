@@ -6,7 +6,7 @@ import { GAME_RESTART } from '../../actions';
 import { QUESTIONS_NUMBER } from '../../constants';
 import PropTypes from 'prop-types';
 
-const Result = ({points, round, onRestart, record}) => {
+export const Result = ({ points, round, onRestart, record }) => {
 
   const handleRestart = () => {
     onRestart()
