@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { 
+import {
   GAME_STARTED,
   GAME_ENDED,
   NEXT_QUESTION,
@@ -8,7 +8,7 @@ import {
 import { POINTS_ARRAY } from './constants';
 
 function calculatePoints(round) {
-  return POINTS_ARRAY[round]
+  return POINTS_ARRAY[round];
 }
 
 export function questions(state = [], action) {
@@ -23,7 +23,7 @@ export function questions(state = [], action) {
 }
 
 export function round(state = 0, action) {
-  switch(action.type) {
+  switch (action.type) {
     case GAME_STARTED:
       return state + 1;
     case NEXT_QUESTION:
@@ -36,7 +36,7 @@ export function round(state = 0, action) {
 }
 
 export function ended(state = false, action) {
-  switch(action.type) {
+  switch (action.type) {
     case GAME_ENDED:
       return true;
     case GAME_RESTART:
@@ -47,7 +47,7 @@ export function ended(state = false, action) {
 }
 
 export function points(state = 0, action) {
-  switch(action.type) {
+  switch (action.type) {
     case NEXT_QUESTION:
       return state + calculatePoints(action.round);
     case GAME_ENDED:
@@ -60,7 +60,7 @@ export function points(state = 0, action) {
 }
 
 export function record(state = 0, action) {
-  switch(action.type) {
+  switch (action.type) {
     case GAME_ENDED:
       return state < action.points ? action.points : state;
     default:

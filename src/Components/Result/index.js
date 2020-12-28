@@ -7,18 +7,17 @@ import { QUESTIONS_NUMBER } from '../../constants';
 import PropTypes from 'prop-types';
 
 export const Result = ({ points, round, onRestart, record }) => {
-
   const handleRestart = () => {
-    onRestart()
-  }
+    onRestart();
+  };
 
   const getResultMessage = () => {
-    if (round > QUESTIONS_NUMBER ) {
-      return 'Congratulations, You have won!'
+    if (round > QUESTIONS_NUMBER) {
+      return 'Congratulations, You have won!';
     } else {
-      return 'Unfortunatelly you have lost. Try again and goock luck!'
+      return 'Unfortunatelly you have lost. Try again and goock luck!';
     }
-  }
+  };
 
   return (
     <ResultContainer>
@@ -27,29 +26,30 @@ export const Result = ({ points, round, onRestart, record }) => {
       <Points>You earned {points} point(s)</Points>
       <Record>Your record is {record} point(s)</Record>
 
-      <Button 
-        variant='contained'
-        color='primary'
-        size='large'
-        onClick={handleRestart}>
+      <Button
+        variant="contained"
+        color="primary"
+        size="large"
+        onClick={handleRestart}
+      >
         Restart
-      </Button>      
+      </Button>
     </ResultContainer>
   );
-}
+};
 
 function mapStateToProps(state) {
   return {
     points: state.points,
     round: state.round,
     record: state.record,
-  }
+  };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     onRestart: () => dispatch({ type: GAME_RESTART }),
-  }
+  };
 }
 
 Result.propTypes = {
@@ -57,6 +57,6 @@ Result.propTypes = {
   round: PropTypes.number,
   onRestart: PropTypes.func,
   record: PropTypes.number,
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Result);

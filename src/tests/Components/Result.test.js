@@ -13,9 +13,9 @@ describe('Result', () => {
 
   it('renders the Result', () => {
     expect(wrapper.find(Title).prop('children')).toBe('Result');
-  })
-  
+  });
+
   it('renders the Restart Button', () => {
     expect(wrapper.find(Button).prop('children')).toBe('Restart');
-  })
+  });
 });

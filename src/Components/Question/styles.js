@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { makeStyles } from '@material-ui/core/styles';
 
-export const useStyles = makeStyles((theme) => ({
+export const useStyles = makeStyles(theme => ({
   root: {
     '& .MuiTextField-root': {
       margin: theme.spacing(1),
@@ -33,7 +33,7 @@ export const QuestionContainer = styled.div`
 export const QuestionHeader = styled.div`
   background-color: #337ab7;
   width: 60%;
-  color: white; 
+  color: white;
   font-size: 30px;
   min-height: 120px;
   padding: 10px;

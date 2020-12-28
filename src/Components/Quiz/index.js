@@ -6,25 +6,20 @@ import Result from '../Result';
 import Question from '../Question';
 
 export const Quiz = ({ round, ended }) => {
-
   function getStep(round, ended) {
     if (round === 0) {
-      return <Tutorial />
+      return <Tutorial />;
     } else {
       if (ended) {
-        return <Result />
+        return <Result />;
       } else {
-        return <Question />
+        return <Question />;
       }
     }
   }
 
-  return (
-    <>
-      {getStep(round, ended)}
-    </>
-  );
-}
+  return <>{getStep(round, ended)}</>;
+};
 
 function mapStateToProps(state) {
   return {
@@ -36,6 +31,6 @@ function mapStateToProps(state) {
 Quiz.propTypes = {
   round: PropTypes.number,
   ended: PropTypes.bool,
-}
+};
 
 export default connect(mapStateToProps)(Quiz);
